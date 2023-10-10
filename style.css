@@ -1,0 +1,9 @@
+body {
+    background-color: blue;
+}
+.outerContainer {   
+    border: 6px solid red;
+    display: flex;
+    align-items:stretch;
+   
+}
