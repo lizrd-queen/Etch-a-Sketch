@@ -1,9 +1,16 @@
 body {
     background-color: blue;
 }
-.outerContainer {   
-    border: 6px solid red;
+#outerContainer {   
+    border: 20px solid red;
     display: flex;
-    align-items:stretch;
+    justify-content: space-around; /* Adjust this to your preferred spacing */
+    flex-wrap: wrap; 
    
+}
+
+.grid-item {
+    background-color: #ccc;
+    border: 1px solid #000;
+    padding: 20px;
 }
