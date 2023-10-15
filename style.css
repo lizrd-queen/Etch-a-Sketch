@@ -3,14 +3,20 @@ body {
 }
 #outerContainer {   
     border: 20px solid red;
-    display: flex;
-    justify-content: space-around; /* Adjust this to your preferred spacing */
-    flex-wrap: wrap; 
-   
+    height: 520px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
 }
+
+
 
 .grid-item {
     background-color: #ccc;
-    border: 1px solid #000;
-    padding: 20px;
+    display: flex;
+    width: 100%; /* 100% of grid cell width */
+    height: 100%; /* 100% of grid cell height */
+    box-sizing: border-box;
+    border: 1px solid black;
 }

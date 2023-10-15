@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     var outerContainer = document.getElementById('outerContainer');
     
-    var numRows = 3;
-    var numCols = 3;
+    var numRows = 16;
+    var numCols = 16;
 
     for (var i = 0; i < numRows; i++) {
         var row = document.createElement("div");
