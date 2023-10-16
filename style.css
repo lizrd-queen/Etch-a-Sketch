@@ -13,10 +13,9 @@ body {
 
 
 .grid-item {
-    background-color: #ccc;
     display: flex;
     width: 100%; /* 100% of grid cell width */
     height: 100%; /* 100% of grid cell height */
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid purple;
 }

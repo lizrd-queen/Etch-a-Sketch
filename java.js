@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (var i = 0; i < numRows; i++) {
         var row = document.createElement("div");
+       
         row.classList.add("grid-row");
         for (var j = 0; j < numCols; j++) {
             var div = document.createElement("div");
@@ -13,5 +14,18 @@ document.addEventListener("DOMContentLoaded", function () {
             row.appendChild(div);
         }
         outerContainer.appendChild(row);
+
+
     }
+
+    const gridItems =  document.querySelectorAll('.grid-item')
+    gridItems.forEach((item) => {
+        item.style.backgroundColor = 'white';
+        item.addEventListener('mouseover', () => {
+            item.style.backgroundColor = 'black';
+        });
+    });    
 });
+
+
+
