@@ -1,14 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
     var outerContainer = document.getElementById('outerContainer');
-    
+    var resizeGrid = document.getElementById('resizeGrid');
+
     var numRows = 16;
     var numCols = 16;
 
-    for (var i = 0; i < numRows; i++) {
+function createGrid(rows,cols) {
+    outerContainer.innerHTML = '';
+
+
+
+    outerContainer.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    outerContainer.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+
+
+    for (var i = 0; i < rows; i++) {
         var row = document.createElement("div");
-       
         row.classList.add("grid-row");
-        for (var j = 0; j < numCols; j++) {
+        for (var j = 0; j < cols; j++) {
             var div = document.createElement("div");
             div.classList.add("grid-item");
             row.appendChild(div);
@@ -25,7 +34,24 @@ document.addEventListener("DOMContentLoaded", function () {
             item.style.backgroundColor = 'black';
         });
     });    
-});
+}
+
+createGrid(numRows,numCols)
+
+
+resizeGrid.addEventListener('click',function () {
+    var newSize = prompt("Enter a new size UwU");
+    if (newSize) {
+        newSize = parseInt(newSize);
+        if (!isNaN(newSize) && newSize > 0) {
+            createGrid(newSize,newSize);
+        } else {
+            alert("god damnit >:(")
+        }
+    
+    }
+})
 
 
 
+})

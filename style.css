@@ -1,21 +1,18 @@
 body {
-    background-color: blue;
+    background-color: gray;
 }
-#outerContainer {   
+
+#outerContainer {
     border: 20px solid red;
-    height: 520px;
+    height: 500px;
     width: 500px;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
 }
 
-
-
 .grid-item {
-    display: flex;
-    width: 100%; /* 100% of grid cell width */
-    height: 100%; /* 100% of grid cell height */
     box-sizing: border-box;
     border: 1px solid purple;
+    aspect-ratio: 1/1;
 }
